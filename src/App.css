@@ -1,0 +1,11 @@
+body {
+  background: #191919 !important;
+}
+
+.chakra-select option {
+  background: #262626 !important;
+}
+
+.chakra-select option:hover {
+  background: red !important;
+}
