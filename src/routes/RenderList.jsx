@@ -56,12 +56,11 @@ const RenderList = ({ stateTodo, colorTodo }) => {
     const filerColorTodo = filerStateTodo.filter((todo) => {
       if (colorTodo === "red") {
         return todo.color === "red";
-      } else if (colorTodo === "gray") {
-        return todo.color === "gray";
+      } else if (colorTodo === "green") {
+        return todo.color === "green";
       } else if (colorTodo === "blue") {
         return todo.color === "blue";
-      } else if (colorTodo === "purple") {
-        return todo.color === "purple";
+      
       } else {
         return true;
       }
@@ -87,7 +86,7 @@ const RenderList = ({ stateTodo, colorTodo }) => {
   const handleChangeColor = (id, color) => {
     toast({
       title: "Success",
-      description: `Bạn đã thay đổi màu ${color} thành công`,
+      description: `Bạn đã đổi màu ${color} thành công`,
       status: "success",
       position: "top-right",
       duration: 2000,
@@ -138,9 +137,8 @@ const RenderList = ({ stateTodo, colorTodo }) => {
                   onChange={(e) => handleChangeColor(todo.id, e.target.value)}
                 >
                   <option value="red">Red</option>
-                  <option value="gray">Gray</option>
+                  <option value="green">Green</option>
                   <option value="blue">Blue</option>
-                  <option value="purple">purple</option>
                 </Select>
                 <Button
                   size={"xs"}
